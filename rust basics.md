@@ -5,10 +5,10 @@ The first thing we need to know is , variables in rust are const by default, whi
 <img width="827" alt="截屏2024-02-22 22 50 06" src="https://github.com/wycl16514/A_hand_wetted_making_tour_of_rust/assets/7506958/05dd9979-f863-4c48-9b10-ff1cac52e648">
 
 if you want to reassign value to variable, you need to add the "mut" keyword, just like following:
-'''rust
+```r
 fn main() {
     let mut a = 1;
     a = 2;
     println!("a is {}", a);
 }
-'''
+```
