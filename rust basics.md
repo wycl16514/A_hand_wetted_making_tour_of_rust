@@ -12,3 +12,37 @@ fn main() {
     println!("a is {}", a);
 }
 ```
+and you run command "cargo run", you can get the result. The second point is transfer of owership,you will get confused for the following code if you have experiences for other programming language:
+```r
+struct User {
+    name: String,
+}
+
+fn print_user(user: User) {
+    println!("name of user is {}", user.name);
+}
+fn main() {
+    let user = User {
+        name: "Tylor".to_string(),
+    };
+    print_user(user);
+    //user can't be used again, because ownership is transfer to print_user
+    print!("user name: {}", user.name);
+}
+```
+if you compile above code , you will get the following error:
+<img width="1115" alt="截屏2024-02-22 23 08 23" src="https://github.com/wycl16514/A_hand_wetted_making_tour_of_rust/assets/7506958/79c1752e-fc38-4af9-8818-654516329a35">
+
+but the transfer of ownership will not happend on basic type such as u64, or i32, the following code is ok, very confusing right:
+```r
+fn print_val(a: u64) {
+    println!("value of a is :{}", a);
+}
+fn main() {
+    let a = 2;
+    print_val(a);
+    //you can still manuplate a here:
+    println!("value of a is : {}", a);
+}
+```
+if you get confused, don't worry, we will get clarify in later chapters.
