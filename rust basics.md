@@ -45,4 +45,39 @@ fn main() {
     println!("value of a is : {}", a);
 }
 ```
-if you get confused, don't worry, we will get clarify in later chapters.
+if you get confused, don't worry, we will get clarify in later chapters.How can we keep the ownership of User object? we need to use reference, the following code will avoid the problem happened above:
+```r
+struct User {
+    name: String,
+}
+
+fn print_user(user: &User) {
+    //& means reference and won't request the ownership
+    println!("name of user is {}", user.name);
+}
+
+fn main() {
+    let user = User {
+        name: "chenyi".to_string(),
+    };
+    print_user(&user);
+    println!("name of user : {}", user.name);
+}
+```
+the symbol '&' means references, if you come from c++ you will familiar with it. It tell the compiler that the function will only borrow the input object and keep the ownership for
+the caller, and that's why when we finish calling print_user and we can still use the User instance in the main function. Finnally let's see reference and dereference, see the followint code: 
+```r
+fn main() {
+    let mut x = 1;
+    let x_ref = &mut x;
+    /*
+    x_ref is a mutable
+    x_ref is a container of x, *x_ref is get x out from the container of x
+     */
+    *x_ref += 1;
+    //what is the value of x?
+    println!("x is: {}", x);
+}
+
+```
+x_ref is a mutable reference to x, actually is a x_ref is a container for x, the symbol '*' is called dereference, which means get the object contained in the container out from the container, which means *x_ref is the same as the variable x, run the code and you will see the value of x turn into 2, that's all for the basics of rust, let's go to a real project of rust.
