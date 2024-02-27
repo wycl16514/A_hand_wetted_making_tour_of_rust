@@ -1,4 +1,4 @@
-<img width="645" alt="截屏2024-02-27 22 35 36" src="https://github.com/wycl16514/A_hand_wetted_making_tour_of_rust/assets/7506958/517c515e-97f1-4ec2-84d2-b389847ef687"><img width="962" alt="截屏2024-02-27 22 19 38" src="https://github.com/wycl16514/A_hand_wetted_making_tour_of_rust/assets/7506958/5945f54e-fb45-45d8-b833-3ee63cf7ad69">We have some basics, let's dive directly into projects, by doing lots of projects, we can internalize rust programming skill into ourself.Our first hand wetted project is a simple command line
+We have some basics, let's dive directly into projects, by doing lots of projects, we can internalize rust programming skill into ourself.Our first hand wetted project is a simple command line
 application. It receives two numbers console which are inputed by user and compute their greatest commond diviser and return the result. There are lots of materials that are talking about 
 this algorithm, we won't go into the detail of it, if you are interesting at it, you can info from here: https://en.wikipedia.org/wiki/Greatest_common_divisor
 
